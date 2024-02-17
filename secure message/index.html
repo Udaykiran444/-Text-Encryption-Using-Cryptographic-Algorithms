@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryption and Decryption Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Include CryptoJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="section">
+            <h2>Encryption</h2>
+            <label for="encryptMessage">Enter your message:</label>
+            <textarea id="encryptMessage" placeholder="Type your message here"></textarea>
+
+            <label for="encryptKey">Enter encryption key:</label>
+            <input type="text" id="encryptKey" placeholder="Enter encryption key">
+
+            <button onclick="encrypt()">Encrypt</button>
+
+            <div class="result">
+                <label for="encryptedMessage">Encrypted Message:</label>
+                <textarea id="encryptedMessage" readonly></textarea>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Decryption</h2>
+            <label for="decryptMessage">Enter encrypted message:</label>
+            <textarea id="decryptMessage" placeholder="Paste encrypted message here"></textarea>
+
+            <label for="decryptKey">Enter decryption key:</label>
+            <input type="text" id="decryptKey" placeholder="Enter decryption key">
+
+            <button onclick="decrypt()">Decrypt</button>
+
+            <div class="result">
+                <label for="decryptedMessage">Decrypted Message:</label>
+                <textarea id="decryptedMessage" readonly></textarea>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
